@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/589bd344-b268-4113-80e4-e793ff333ced/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/filename-manager",
+    "appService.deploySubpath": "."
+}
