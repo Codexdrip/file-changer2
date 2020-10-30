@@ -36,14 +36,14 @@ router.get("/about", function (req, res, next) {
 
 router.get("/success", function (req, res) {
   res.render("success");
-});  
+});
 
 router.post("/uploads", upload.array("uploaded_files", 10), async function (
   req,
   res
 ) {
-  var dirPath = path.join(__dirname, "..\\public\\data\\uploads\\");
-  
+  var dirPath = path.join(__dirname, "../public/data/uploads/");
+
   // Get path to image directory
   const imageDirPath = dirPath;
 
@@ -67,7 +67,6 @@ router.post("/uploads", upload.array("uploaded_files", 10), async function (
     ],
     filename: "Package.zip",
   });
-
 });
 
 module.exports = router;
