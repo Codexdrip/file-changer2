@@ -8,8 +8,11 @@
 
     <main>
       <div class="jumbotron">
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>
+        <h1>The easiest way to batch rename files!</h1>
+        <p>Type in the new root name of the file... (ex. 400_ss_kg)</p>
+        <p>Then upload the folder with the images. (Must be a folder)</p>
+        <p>Then hit Go!
+        <p>A download will begin and you will receive a zip file with the updated file names.</p>
         <div>
           <form
             action="/uploads"
@@ -17,13 +20,15 @@
             method="post"
             id="folders"
           >
+          <div class="space">
             <input
               type="text"
               class="form-control"
               placeholder="New Name"
               name="newName"
             />
-            <div class="form-group">
+          </div>
+            <div class="form-group space">
               <input
                 type="file"
                 class="form-control-file"
@@ -31,8 +36,8 @@
                 webkitdirectory
                 mozdirectory
               />
-              <input type="submit" value="Go" class="btn btn-default" />
             </div>
+            <div class="form-group space"><input type="submit" value="Go" class="btn btn-success btn-md btn-block" /></div>
           </form>
         </div>
       </div>
@@ -40,10 +45,5 @@
 
     <footer><%- include('./includes/footer'); %></footer>
   </body>
-  <script>
-    submitForms = function () {
-      document.getElementById("newName").submit();
-      //document.getElementById("folders").submit();
-    };
-  </script>
+  
 </html>
